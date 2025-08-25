@@ -1,0 +1,332 @@
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  
+  
+}
+header {
+    display: flex;
+   padding-bottom: 15px;
+   font-size: 20px;
+   margin-top: 25px;
+   align-items: center;
+   justify-content: center;
+   font-weight: 700;
+   text-decoration: none;
+   color: rgb(167, 98, 231);
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+     }
+
+
+#wigets {
+    display: grid;
+    width: 100%;
+    height: 500px;
+    grid-template-rows:12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-columns: 6% 41% 6% 41% 6%; 
+    padding-top: 30px;   
+}
+#w_depense {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    border-left-color:rgb(138, 47, 224); 
+    border-left-width: 10px;
+    border-left-style: solid;
+   
+    
+}
+#w_restant {
+    grid-column: 2 / 3;
+    grid-row: 5 / 8;
+    border-left-color:rgb(138, 47, 224); 
+    border-left-width: 10px;
+    border-left-style: solid;
+}
+#w_epargne_1 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+#w_epargne_2 {
+    grid-column: 4 / 5;
+    grid-row: 4 / 6;
+}
+#w_epargne_3 {
+    grid-column: 4 / 5 ;
+    grid-row: 7 / 9;
+}
+.w_epargnes {
+   border-left-color:rgb(138, 47, 224); 
+    border-left-width: 10px;
+    border-left-style: solid;
+}
+.header_links {
+    padding-left: 7px;
+    padding-right: 7px; 
+    text-decoration: none;
+   color: rgb(167, 98, 231);
+}
+.w_paragraphes{
+    padding-left:30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+#depenses_persistantes {
+    display: flex;
+   padding-bottom: 15px;
+   font-size: 20px;
+   margin-top: 25px;
+   align-items: center;
+   justify-content: center;
+   font-weight: 700;
+   text-decoration: none;
+}
+.tout_input_depenses_persistantes{
+    display:flex;
+    padding-right: 30px;
+}
+.input_depenses_persistantes {
+    border-style:none;
+}
+/* Boutton Go Dépenses */ 
+button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0em 1em 1em;
+  background-color: rgb(161, 96, 222);
+  cursor: pointer;
+  box-shadow: 4px 6px 0px black;
+  border: 4px solid;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  transition: box-shadow 250ms, transform 250ms, filter 50ms;
+}
+button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 3px 0px black;
+}
+button:active {
+  filter: saturate(0.75);
+}
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 250ms;
+}
+button:hover::after {
+  transform: translateX(0);
+}
+.bgContainer {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  max-width: 35%; /* adjust this if the button text is not proper */
+  font-size: 2em;
+  font-weight: 600;
+}
+.bgContainer span {
+  position: relative;
+  transform: translateX(-100%);
+  transition: all 250ms;
+}
+.button:hover .bgContainer > span {
+  transform: translateX(0);
+}
+.arrowContainer {
+  padding: 1em;
+  margin-inline-end: 1em;
+  border: 4px solid;
+  border-radius: 50%;
+  background-color:white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 250ms, background-color 250ms;
+  z-index: 100;
+}
+.arrowContainer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: rgb(163, 93, 229);
+  transform: translateX(-100%);
+  z-index: -1;
+  transition: transform 250ms ease-in-out;
+}
+button:hover .arrowContainer::after {
+  transform: translateX(0);
+}
+button:hover .arrowContainer {
+  transform: translateX(5px);
+}
+button:active .arrowContainer {
+  transform: translateX(8px);
+}
+.arrowContainer svg {
+  vertical-align: middle;
+}
+/* Fin du boutton go depenses */ 
+
+#div_depenses {
+    display: grid;
+    width: 100%;
+    height: 420px;
+    grid-template-rows:12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-columns: 6% 41% 6% 41% 6%; 
+    padding-top: 30px;   
+}
+#d_depense {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    border-left-color:rgb(138, 47, 224); 
+    border-left-width: 10px;
+    border-left-style: solid;
+   
+    
+}
+#d_restant {
+    grid-column: 2 / 3;
+    grid-row: 5 / 8;
+    border-left-color:rgb(138, 47, 224); 
+    border-left-width: 10px;
+    border-left-style: solid;
+}
+#d_depense_1 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+    border-left-color:rgb(47, 133, 224); 
+}
+#d_depense_2 {
+    grid-column: 4 / 5;
+    grid-row: 4 / 6;
+    border-left-color:rgb(47, 224, 79); 
+}
+#d_depense_3 {
+    grid-column: 4 / 5 ;
+    grid-row: 7 / 9;
+    border-left-color:rgb(251, 255, 5); 
+}
+.d_depenses {
+    border-left-width: 10px;
+    border-left-style: solid;
+}
+.d_paragraphes{
+    padding-left:30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+/* From Uiverse.io by OnCloud125252 */ 
+/* Note that you only needs to edit the config to customize the button! */
+
+.plusButton_1 {
+  /* Config start */
+  --plus_sideLength: 2.5rem;
+  --plus_topRightTriangleSideLength: 0.9rem;
+  /* Config end */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: var(--plus_sideLength);
+  height: var(--plus_sideLength);
+  background-color: rgb(47, 133, 224); 
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: 100px;
+  border-radius: 20px;
+}
+.plusButton_2 {
+  /* Config start */
+  --plus_sideLength: 2.5rem;
+  --plus_topRightTriangleSideLength: 0.9rem;
+  /* Config end */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: var(--plus_sideLength);
+  height: var(--plus_sideLength);
+  background-color: rgb(47, 224, 79);  
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: 100px;
+  border-radius: 20px;
+}
+.plusButton_3 {
+  /* Config start */
+  --plus_sideLength: 2.5rem;
+  --plus_topRightTriangleSideLength: 0.9rem;
+  /* Config end */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: var(--plus_sideLength);
+  height: var(--plus_sideLength);
+  background-color: rgb(251, 255, 5); 
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: 100px;
+  border-radius: 20px;
+}
+
+.plusButton::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover {
+  cursor: pointer;
+}
+
+.plusButton:hover::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton:focus-visible::before {
+  --plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+}
+
+.plusButton>.plusIcon {
+  fill: white;
+  width: calc(var(--plus_sideLength) * 0.7);
+  height: calc(var(--plus_sideLength) * 0.7);
+  z-index: 1;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.plusButton:hover>.plusIcon {
+  fill: black;
+  transform: rotate(180deg);
+}
+
+.plusButton:focus-visible>.plusIcon {
+  fill: black;
+  transform: rotate(180deg);
+}   
