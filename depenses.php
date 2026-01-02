@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -6,9 +7,10 @@
     <title>Mes Dépenses</title>
     <link href="style.css" rel="stylesheet">
     
-    <script src="main.js"></script>
-    <script src="variables.js"></script>
-    <script src="fontions.js"></script>
+    <script src="main.js" defer></script>
+    <script src="variables.js"defer></script>
+    <script src="fontions.js"defer></script>
+    <script src="console.log.js"defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -16,23 +18,23 @@
 </head>
 <body>
 <header>
-        <a class="header_links" href="index.html">Acceuil</a>
-        <a class="header_links"href="depenses.html"> Mes dépenses</a>
-        <a class="header_links"href="simulations.html">Simulations</a>
-        <a class="header_links"href="epargnes.html">Epargnes</a>
-        <a class="header_links" href="parametres.html">Paramètres</a>
+        <a class="header_links" href="acceuil.php">Acceuil</a>
+        <a class="header_links"href="depenses.php"> Mes dépenses</a>
+        <a class="header_links"href="simulations.php">Simulations</a>
+        <a class="header_links"href="epargnes.php">Epargnes</a>
+        <a class="header_links" href="parametres.php">Paramètres</a>
+        <a class="header_deconexion" href="index.php">Se déconnecter</a>
     </header>
-   
     <h1>
         Mes Dépenses
     </h1>
     <div id="depenses_persistantes">
-       <div class="tout_input_depenses_persistantes"> <p>Salaire: </p> <input class="input_depenses_persistantes"type="text" placeholder="Salaire Mensuel"></div>
-       <div class="tout_input_depenses_persistantes"> <p>Prélevé: </p> <input  class="input_depenses_persistantes" type="text" placeholder="Argent prélevé mensuellement"><div class="tout_input_depenses_persistantes"></div>
+       <div class="tout_input_depenses_persistantes"> <p>Salaire: </p> <input class="input_depenses_persistantes" id="input_salaire"type="text" placeholder="Salaire Mensuel"></div>
+       <div class="tout_input_depenses_persistantes"> <p>Prélevé: </p> <input  class="input_depenses_persistantes"id="input_preleve" type="text" placeholder="Argent prélevé mensuellement"><div class="tout_input_depenses_persistantes"></div>
         <div class="tout_input_depenses_persistantes"><p>Epargnes: </p> <p id="argent_mensuel_cagnotte"> </p></div>
         </div> <br>
     <!-- Boutton --> 
-<button class="button">
+<button class="button" id="button_go">
   <div class="bgContainer">
     <span>Go!</span>
     <span>Go!</span>
@@ -66,6 +68,7 @@
             <p id="d_titre_depense_1" class="d_paragraphes">Alimentaire</p>
             <p id="montant_depense_1"></p>
             <!-- From Uiverse.io by OnCloud125252 --> 
+<a href="popup_depense_1.php">             
 <div tabindex="0" class="plusButton_1">
   <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
     <g mask="url(#mask0_21_345)">
@@ -73,11 +76,13 @@
     </g>
   </svg>
 </div>
+</a>
         </div>
         <div id="d_depense_2" class="d_depenses">
             <p id="d_titre_depense_2" class="d_paragraphes">Santé</p>
             <p id="montant_depense_2"></p>
             <!-- From Uiverse.io by OnCloud125252 --> 
+<a href="popup_depense_2.php">            
 <div tabindex="0" class="plusButton_2">
   <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
     <g mask="url(#mask0_21_345)">
@@ -85,11 +90,13 @@
     </g>
   </svg>
 </div>
+</a>
         </div>
         <div id="d_depense_3" class="d_depenses">
             <p id="d_titre_depense_3" class="d_paragraphes">Divertissement</p>
             <p id="montant_depense_3"></p>
             <!-- From Uiverse.io by OnCloud125252 --> 
+<a href="popup_depense_1.php">
 <div tabindex="0" class="plusButton_3">
   <svg class="plusIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
     <g mask="url(#mask0_21_345)">
@@ -97,6 +104,12 @@
     </g>
   </svg>
 </div>
+</a>
         </div>
+        </div>
+        <div>
+          <button id="button_console_log">
+            Console.log
+          </button>
         </div>
  </body>

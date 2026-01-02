@@ -1,4 +1,5 @@
-    <!DOCTYPE html>
+<?php session_start() ?>
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,9 +7,9 @@
     <title>Acceuil Trackeur de Dépenses</title>
     <link href="style.css" rel="stylesheet">
     
-    <script src="main.js"></script>
-    <script src="variables.js"></script>
-    <script src="fontions.js"></script>
+    <script src="main.js"defer></script>
+    <script src="variables.js"defer></script>           
+    <script src="fontions.js"defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -16,11 +17,14 @@
 </head>
 <body>
     <header>
-        <a class="header_links" href="index.html">Acceuil</a>
-        <a class="header_links"href="depenses.html"> Mes dépenses</a>
-        <a class="header_links"href="simulations.html">Simulations</a>
-        <a class="header_links"href="epargnes.html">Epargnes</a>
-        <a class="header_links" href="parametres.html">Paramètres</a>
+        <a class="header_links" href="acceuil.php">Acceuil</a>
+        <a class="header_links"href="depenses.php"> Mes dépenses</a>
+        <a class="header_links"href="simulations.php">Simulations</a>
+        <a class="header_links"href="epargnes.php">Epargnes</a>
+        <a class="header_links" href="parametres.php">Paramètres</a>
+        <a class="header_links" href="retours.php">Retours (bêta)</a>
+        <a class="header_deconexion" href="logout.php"> Se déconnecter</a>
+
     </header>
     <h1>Bienvenue sur votre trackeur de dépenes !</h1>
     <div id="wigets">
