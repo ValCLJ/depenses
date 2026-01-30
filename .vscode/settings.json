@@ -1,0 +1,32 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "depenses/css/",
+            "color": "foldercolorizer.color_0033ff"
+        },
+        {
+            "folderPath": "depenses/dir/",
+            "color": "foldercolorizer.color_33ff33"
+        },
+        {
+            "folderPath": "depenses/javascript/",
+            "color": "foldercolorizer.color_ffcc00"
+        },
+        {
+            "folderPath": "depenses/php/",
+            "color": "foldercolorizer.color_ff3399"
+        },
+        {
+            "folderPath": "depenses/vxlog/",
+            "color": "foldercolorizer.color_00ccff"
+        },
+        {
+            "folderPath": "depenses/.vscode/",
+            "color": "foldercolorizer.color_ffffff"
+        },
+        {
+            "folderPath": "depenses.php/",
+            "color": "foldercolorizer.color_ff3399"
+        }
+    ]
+}
